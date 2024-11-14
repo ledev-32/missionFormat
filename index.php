@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Formation</title>
-        <meta charset="utf-8">
-    </head>
+    <?php include("includes/head.php");?>
     <body>
-        <h1>Page en cours de développement</h1>
+        <?php include("includes/header.php");?>
+
+        <a href="">Se connecter</a>
+
+        <?php include("includes/footer.php");?>
     </body>
 </html>
