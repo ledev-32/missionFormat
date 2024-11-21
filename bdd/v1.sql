@@ -58,8 +58,8 @@ CREATE TABLE Utilisateur(
    id_entreprise INT NOT NULL,
    id_type INT NOT NULL,
    PRIMARY KEY(id),
-   FOREIGN KEY(id_1) REFERENCES Entreprise(id),
-   FOREIGN KEY(id_2) REFERENCES TypeUtil(id)
+   FOREIGN KEY(id_entreprise) REFERENCES Entreprise(id),
+   FOREIGN KEY(id_type) REFERENCES TypeUtil(id)
 );
 
 CREATE TABLE Formation(
