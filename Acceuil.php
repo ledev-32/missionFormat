@@ -1,9 +1,18 @@
+<?php 
+    session_save_path("sessions");
+    session_start();
+
+    if (!isset($_SESSION["userId"])) {header("Location: ../index.php");} 
+?>
+
+
+
 <html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 
-    <link href="Css/style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
  
     <title>FORMAT</title>
     
@@ -15,9 +24,8 @@
     </header>
 
     <nav>
-        <a href=""></a>
-        <a href="PrixGoMarket.html"></a>
-        <a href="AvisGoMarket.html"></a>
+        <?php if($_SESSION["userType"] == 0) {echo "<a href='formations/creer/creerForma.php'>Créer une formation</a>";}?>
+        <a href="logout.php">Se déconnecter</a>
     </nav>
 
     <section>

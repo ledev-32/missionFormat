@@ -25,7 +25,7 @@ class User {
     // --- --- Output : user (all informations) or null (in case of issue)
     public function login($login,$password) {
         // Collect all informations about the user in the database
-        $stmt = $this->pdo->prepare("SELECT * FROM users WHERE loginU = :loginU");
+        $stmt = $this->pdo->prepare("SELECT * FROM utilisateur WHERE loginU = :loginU");
         $stmt->bindParam(":loginU",$login,PDO::PARAM_STR);
         $stmt->execute();
         $user = $stmt->fetch();
@@ -35,13 +35,13 @@ class User {
 
         // Check if the hash is the same in the database
         // If it the same, return the informations
-        if ($user && $hash === $user["passwordU"]) {
+        if ($user && $hash === $user["mdp"]) {
             return $user;
         }
-        // Else, return null
+        // Or return NULL
         return null;
     }
     // ============================================================================================
-    
+
 }
 ?>
