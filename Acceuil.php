@@ -25,7 +25,6 @@
         <p> Nous proposons des fruits, légumes et aussi la petite épicerie à des prix imbattables.
 		<br>
 		Nous récupérons les invendus dans les grandes surfaces tous les jours.</p>
-		<img src="imageC_GO.MARKET.jpg" alt="Image d'accueil" class="normal-image">
     </section>
 
     <footer>

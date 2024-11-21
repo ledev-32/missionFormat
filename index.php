@@ -2,18 +2,14 @@
 <head>
   <title>connexion</title>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-  <link href="Css/style.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 
   <script type="text/javascript"> 
     function verifChamps()
     {
-      if (document.getElementById('userMatricule').value=='' || document.getElementById('mdp').value=='')
-
-      {
+      if (document.getElementById('userMatricule').value=='' || document.getElementById('mdp').value=='') {
         alert("Remplir tous les champs");
-        return false;
       }
-      return true;
     }
   </script>
 
@@ -27,7 +23,6 @@
 <div align="center">
   <p><font face="Comic Sans MS" color="#000066" size="4">Pour pouvoir acc&eacute;der
     &agrave; certaines parties du site il est n&eacute;cessaire de vous identifier.</font></p> 
-  <p><img src="logo.jpg" width="168" height="148"></p>
 
   <form method="POST" action="AccueilAuthentification.php" name="identification" onSubmit="return verifChamps()">
       
