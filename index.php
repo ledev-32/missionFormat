@@ -29,7 +29,7 @@
     &agrave; certaines parties du site il est n&eacute;cessaire de vous identifier.</font></p> 
   <p><img src="logo.jpg" width="168" height="148"></p>
 
-  <form method="POST" action="AccueilAuthentification.php" name="identification" onSubmit="return verifChamps()">
+  <form method="POST" action="Acceuil.php" name="identification" onSubmit="return verifChamps()">
       
       <div width="53%"><font face="Comic Sans MS" size="3" color="#000099">Votre
         identifiant</font></div>
