@@ -1,17 +1,27 @@
 <?php
-    include("\connexionBdd.php"); 
+    include("\connexionBdd.php");
+    include_once "class/Compteur.php"
+     
+    $user_id = $_SESSION['user_id'];
 
     $Formation="";
     $Session="";
 
-  
+    
     $Formation=$_POST["SelectForm"];
     $Session=$_POST["SelectSession"];  
 
 
-    $SQLsel1 = ("SELECT medDepotlegal
-    from medicament
-    where  medNomcommercial = '$MedicamenPres1';");
+    $SQLsel = ("SELECT count(id)
+    from Inscrit
+    where  dateInscrit like '' and id = '$MedicamenPres1';");
+
+
+        $users = $pdo->query("SELECT id, pseudo FROM utilisateurs WHERE id != $user_id");
+            while ($user = $users->fetch()) {
+                $selected = ($user['id'] == $destinataire_id) ? 'selected="selected"' : '';
+                echo "<option value='{$user['id']}' $selected>{$user['pseudo']} </option>";
+            }
    
    $resultSQL1 = $connexion->query($SQLsel1) or die($SQLsel1.print_r($connexion->errorInfo(), true));
    $ligne1 = $resultSQL1->fetch();
