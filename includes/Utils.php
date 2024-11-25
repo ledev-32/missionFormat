@@ -1,9 +1,9 @@
 <?php
-function dateDuJour(){
+function AnnéeAct(){
 
-$today = date('d-m-Y');
+$today = date('Y');
 $timestamp = strtotime($today);
-$formattedDate = date('l, F j, Y', $timestamp);
+$formattedDate = date('Y', $timestamp);
 return $formattedDate;
 }
 

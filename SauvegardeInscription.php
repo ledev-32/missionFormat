@@ -1,12 +1,13 @@
 <?php
     include("\connexionBdd.php");
-    include_once "includes/utils.php"
+    include_once "includes/utils.php";
 
     $user_id = $_SESSION['user_id'];
 
     $Formation="";
     $Session="";
 
+    $dateInscrit = AnnéeAct();
     
     $Formation=$_POST["SelectForm"];
     $Session=$_POST["SelectSession"];  

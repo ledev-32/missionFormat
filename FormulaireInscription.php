@@ -15,7 +15,7 @@
     </header>
     <form id="formInscription" action="SauvegardeInscription.php" method="post">
     <legend> RENSEIGNEMENTS CONCERNANT LE DIPLÔME REQUIS </legend>
-
+    
     <label class="titre" >PRODUIT 1 : </label>          
           <select name="SelectForm" id="SelectForm" class="zone" required>
             <option value=""> - Sélectionner - </option>
