@@ -1,7 +1,7 @@
 <?php
     include("\connexionBdd.php");
-    include_once "class/Compteur.php"
-     
+    include_once "includes/utils.php"
+
     $user_id = $_SESSION['user_id'];
 
     $Formation="";
@@ -37,3 +37,6 @@
     }
 
 ?>
+
+
+
